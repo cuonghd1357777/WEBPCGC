@@ -1,0 +1,19 @@
+﻿@model WEBPC.Models.sanpham
+<div class="kkk">
+    <div class="d"><a href="@Url.Action("chitietsanpham","WEBPC",new {id=Model.masp})"> @Model.tensanpham</a></div>
+    <div class="dd">
+        <a href="#">
+            <img style="
+    width: 100%;
+" src="~/hinh anh/@Model.hinhanh">
+        </a>
+    </div>
+    <div >
+        <span style="text-align: center; text-decoration: line-through; color: #999;">
+            20,000,000đ
+        </span>
+        <span style="text-align:center;color:red;">
+            @Html.FormatValue(@Model.dongia, "{0:#,##0}")đ
+        </span>
+
+    </div>
